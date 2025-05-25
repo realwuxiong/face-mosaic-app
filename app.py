@@ -545,11 +545,47 @@ input[type="radio"] {
     font-size: 0.9em;
     color: #4a5568;
 }
+.github-footer {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 20px;
+    color: #4a5568;
+}
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #667eea;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+}
+.github-link:hover {
+    color: #764ba2;
+    background: rgba(102, 126, 234, 0.1);
+    border-color: #667eea;
+    transform: translateY(-2px);
+}
+.github-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    fill: currentColor;
+}
 @media (max-width: 768px) {
     body { padding: 10px; }
     .container { padding: 20px; }
     h1 { font-size: 1.8em; }
     .radio-group { flex-direction: column; gap: 10px; }
+    .github-footer { padding: 15px 20px; }
+    .github-link { font-size: 1em; }
 }
 </style>
 <script>
@@ -702,7 +738,7 @@ accept=".png,.jpg,.jpeg,.gif,.bmp,.webp" required>
 <div class="form-group">
 <label for="mosaic_level">🔲 马赛克级别 (2-50):</label>
 <input type="number" name="mosaic_level" id="mosaic_level" value="20" min="2" max="50" step="1">
-<div class="file-info">数值越小，马赛克块越大 (效果越强)。</div>
+<div class="file-info">数值越大，马赛克块越大 (效果越强)。</div>
 </div>
 </div>
 
@@ -739,6 +775,15 @@ accept=".png,.jpg,.jpeg,.gif,.bmp,.webp">
 <li>🛡️ <strong>隐私安全</strong> - 所有处理均在服务器端安全进行，图像不被存储。</li>
 <li>📤 <strong>格式保留</strong> - 尽可能保留原始图片格式 (PNG/WEBP)，其余输出为JPG。</li>
 </ul>
+</div>
+
+<div class="container github-footer">
+<a href="https://github.com/realwuxiong/face-mosaic-app" target="_blank" class="github-link">
+<svg class="github-icon" viewBox="0 0 24 24">
+<path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+</svg>
+查看源码 @ GitHub
+</a>
 </div>
 </body>
 </html>
